@@ -8,7 +8,7 @@ const EXT_PATH_DEFAULTS = [
     GLib.get_home_dir() + "/.local/share/gnome-shell/extensions/",
     "/usr/share/gnome-shell/extensions/"
 ];
-const DEFAULT_HINT_COLOR = 'rgba(251, 184, 108, 1)'; //pop-orange
+const DEFAULT_HINT_COLOR = 'rgba (145, 199, 193, 1)'; //nux-blue
 
 /** Look for the extension in path */
 function getExtensionPath(uuid: string) {
@@ -28,7 +28,7 @@ function getExtensionPath(uuid: string) {
 }
 
 function getSettings(schema: string) {
-    let extensionPath = getExtensionPath("pop-shell@system76.com");
+    let extensionPath = getExtensionPath("nux-shell");
     if (!extensionPath)
         throw new Error('getSettings() can only be called when extension is available');
 
@@ -48,11 +48,11 @@ function getSettings(schema: string) {
     return new Gio.Settings({ settings_schema: schemaObj });
 }
 /**
- * Launch a Gtk.ColorChooserDialog. And then save the color RGBA/alpha values in GSettings of Pop-Shell.
+ * Launch a Gtk.ColorChooserDialog. And then save the color RGBA/alpha values in GSettings of nux-Shell.
  * Using the settings.connect('changed') mechanism, the extension is able to listen to when the color changes in realtime.
  */
 function launch_color_dialog() {
-    let popshell_settings = getSettings("org.gnome.shell.extensions.pop-shell");
+    let popshell_settings = getSettings("org.gnome.shell.extensions.nux-shell");
 
     let color_dialog = new Gtk.ColorChooserDialog({
         title: "Choose Color"

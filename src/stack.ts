@@ -12,9 +12,9 @@ import * as utils from 'utils';
 const Arena = a.Arena;
 const { Clutter, GObject, St } = imports.gi;
 
-const ACTIVE_TAB = 'pop-shell-tab pop-shell-tab-active';
-const INACTIVE_TAB = 'pop-shell-tab pop-shell-tab-inactive';
-const URGENT_TAB = 'pop-shell-tab pop-shell-tab-urgent';
+const ACTIVE_TAB = 'nux-shell-tab nux-shell-tab-active';
+const INACTIVE_TAB = 'nux-shell-tab nux-shell-tab-inactive';
+const URGENT_TAB = 'nux-shell-tab nux-shell-tab-urgent';
 const INACTIVE_TAB_STYLE = '#9B8E8A';
 
 export var TAB_HEIGHT: number = 24
@@ -33,7 +33,7 @@ interface StackWidgets {
 
 function stack_widgets_new(): StackWidgets {
     let tabs = new St.BoxLayout({
-        style_class: 'pop-shell-stack',
+        style_class: 'nux-shell-stack',
         x_expand: true
     });
 

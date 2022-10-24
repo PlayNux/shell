@@ -118,5 +118,5 @@ export function round_to(n: number, digits: number): number {
 }
 
 export function separator(): any {
-    return new St.BoxLayout({ styleClass: 'pop-shell-separator', x_expand: true });
+    return new St.BoxLayout({ styleClass: 'nux-shell-separator', x_expand: true });
 }

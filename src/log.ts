@@ -23,7 +23,7 @@ export function log_level() {
 }
 
 export function log(text: string) {
-    global.log("pop-shell: " + text);
+    global.log("nux-shell: " + text);
 }
 
 export function error(text: string) {

@@ -8,7 +8,7 @@ const { ModalDialog } = imports.ui.modalDialog;
 
 export class AddExceptionDialog {
     dialog: Shell.ModalDialog = new ModalDialog({
-        styleClass: "pop-shell-search modal-dialog",
+        styleClass: "nux-shell-search modal-dialog",
         destroyOnClose: false,
         shellReactive: true,
         shouldFadeIn: false,

@@ -55,7 +55,7 @@ export var ShortcutOverlay = GObject.registerClass(
 
         _init(title: string, columns: Array<Column>) {
             super.init({
-                styleClass: 'pop-shell-shortcuts',
+                styleClass: 'nux-shell-shortcuts',
                 destroyOnClose: false,
                 shellReactive: true,
                 shouldFadeIn: true,
@@ -63,13 +63,13 @@ export var ShortcutOverlay = GObject.registerClass(
             });
 
             let columns_layout = new St.BoxLayout({
-                styleClass: 'pop-shell-shortcuts-columns',
+                styleClass: 'nux-shell-shortcuts-columns',
                 horizontal: true
             });
 
             for (const column of columns) {
                 let column_layout = new St.BoxLayout({
-                    styleClass: 'pop-shell-shortcuts-column',
+                    styleClass: 'nux-shell-shortcuts-column',
                 });
 
                 for (const section of column.sections) {
@@ -80,7 +80,7 @@ export var ShortcutOverlay = GObject.registerClass(
             }
 
             this.add(new St.Label({
-                styleClass: 'pop-shell-shortcuts-title',
+                styleClass: 'nux-shell-shortcuts-title',
                 text: title
             }));
 
@@ -91,7 +91,7 @@ export var ShortcutOverlay = GObject.registerClass(
 
         gen_combination(combination: Array<string>) {
             let layout = new St.BoxLayout({
-                styleClass: 'pop-shell-binding',
+                styleClass: 'nux-shell-binding',
                 horizontal: true
             });
 
@@ -104,11 +104,11 @@ export var ShortcutOverlay = GObject.registerClass(
 
         gen_section(section: Section) {
             let layout = new St.BoxLayout({
-                styleclass: 'pop-shell-section',
+                styleclass: 'nux-shell-section',
             });
 
             layout.add(new St.Label({
-                styleClass: 'pop-shell-section-header',
+                styleClass: 'nux-shell-section-header',
                 text: section.header
             }));
 
@@ -122,7 +122,7 @@ export var ShortcutOverlay = GObject.registerClass(
 
         gen_shortcut(shortcut: Shortcut) {
             let layout = new St.BoxLayout({
-                styleClass: 'pop-shell-shortcut',
+                styleClass: 'nux-shell-shortcut',
                 horizontal: true
             });
 

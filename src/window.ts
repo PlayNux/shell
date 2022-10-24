@@ -68,7 +68,7 @@ export class ShellWindow {
     // True if this window is currently smart-gapped
     smart_gapped: boolean = false;
 
-    border: null | St.Bin = new St.Bin({ style_class: 'pop-shell-active-hint pop-shell-border-normal' });
+    border: null | St.Bin = new St.Bin({ style_class: 'nux-shell-active-hint nux-shell-border-normal' });
 
     prev_rect: null | Rectangular = null;
 
@@ -176,7 +176,7 @@ export class ShellWindow {
             // TODO Probably move overlay color/opacity to prefs.js in future,
             // For now mimic the hint color with lower opacity
             const overlay_alpha = 0.3;
-            const orig_overlay = 'rgba(53, 132, 228, 0.3)';
+            const orig_overlay = 'rgb(145, 199, 193, 0.3)';
             gdk.parse(color_value);
 
             if (utils.is_dark(gdk.to_string())) {
@@ -573,10 +573,10 @@ export class ShellWindow {
 
         if (border) {
             if (!(this.is_max_screen() || this.is_snap_edge())) {
-                border.remove_style_class_name('pop-shell-border-maximize');
+                border.remove_style_class_name('nux-shell-border-maximize');
             } else {
                 borderSize = 0;
-                border.add_style_class_name('pop-shell-border-maximize');
+                border.add_style_class_name('nux-shell-border-maximize');
             }
 
             const stack_number = this.stack;

@@ -9,7 +9,7 @@ shortcut_applied() {
         return 0
     fi
 
-    read -p "Pop shell will override your default shortcuts. Are you sure? (y/n) " CONT
+    read -p "Nux shell will override your default shortcuts. Are you sure? (y/n) " CONT
     if test "$CONT" = "y"; then
         touch "./.confirm_shortcut_change"
         return 1
